@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(15, 38, 15, 0.703);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.header-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.header-div h1{
+  font-size: 50px;
+  letter-spacing: 5px;
+  background-color: linear-gradient;
+  animation-name: slideright;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+
+}
+.header-div h3{
+  font-size: 25px;
+  letter-spacing: 3px;
+  animation-name: slideleft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.check-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
+.check-info h1{
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes slideleft{
+  0%{
+    transform: translateX(-300px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes slideright{
+  0%{
+    transform: translate(300px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+@keyframes bounce{
+  0%,
+  20%,
+  50%,
+  80%,
+  100%{
+    transform: translateY(0);
+  }
+  
+  40%{
+    transform: translateY(-30px);
+  }
+  60%{
+    transform: translateY(-15px);
+  }
+
+}
+.ball{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 30px;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.check-info p{
+  animation: toggleAnimation 3s infinite;
+}
+.container-div{
+  width: 80%;
+  height: 300px;
+  border: 2px solid gold;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.barcelona{
+  width: 98px;
+  height: 90px;
+  animation: teamanimationtwo 3s infinite; 
+
+}
+.real-madrid{
+  width: 127px;
+  height: 90px;
+  animation: teamanimation  3s infinite;
+}
+.vs{
+  margin-right: 50px;
+  margin-left: 30px;
+  font-size: 30px;
+  color: #fff;
+  animation: vs 2.5s infinite;
+}
+.real-madrid-div,
+.barcelona-div{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.real-madrid-div h2{
+  animation: toggleAnimation 5s infinite;
+  font-size: 25px;
+  color: #fff;
+}
+.barcelona-div h2{
+  animation: toggleAnimation 5s infinite;
+  font-size: 25px;
+  background-clip: text;
+  background-image: linear-gradient(90deg, red,blue);
+
+}
+@keyframes toggleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+@keyframes vs{
+  0%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes teamanimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-550px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(360deg);
+  }
+}
+@keyframes teamanimationtwo {
+  0% {
+    opacity: 0;
+    transform: translateX(550px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+
